@@ -15,3 +15,4 @@ Good luck in coding.
 * animCssJquery is pure HTML+CSS+JS and animate.css and JQuery;
 * And, so on.
 
+demos inside folders
