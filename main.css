@@ -1,144 +1,215 @@
-/* Roboto variable font as default */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap'); 
 
-/*normalize.css as default. Uncomment, if you use this main.css in your project*/
-/*@import url(/assets/css/normalize.css);*/
+/* Read the comments */
+/* @import url(/assets/css/guidance.css); */
+/*--importing libs, local modules--*/
+@import url(/assets/styles/css/normalize.css);
+/*--end importing libs, local modules--*/
 
-/*---Defining colors are hard to me, please procced your own. Will glad to review any findings---*/
+/*--connetcting fonts&icons--*/
+/* Connect below the font シ you choose for your site (¬‿¬ )*/
+/* @font-face {
+    font-family: 'Base Text';
+    src: url('/assets/fonts/base_text.eot');    
+} */
+/* @font-face {
+    font-family: 'Decor Text';
+    src: url('/assets/fonts/base_text.eot');    
+} */
+/*--end fonts connect--*/
+/*---general styles---*/
+
 :root {
-    --color-alfa: ;/* 'alfa' means primary */
-    --color-beta: ;/* 'beta' means secondary */
-    --color-theta: ; /* 'typography' for text tags like h2, e.c. */
-    --color-text: ; /* general */
-    --color-text-light: ;
-    --color-selected: ;
-    --color-disabled: ;
-    --color-details: ;
-    --color-outcast: ;
-    --color-frozen: ;
-    --color-other: ;
-    --color-test: ;
+    /*--color scheme--*/
+    --l-base: #96eff6;
+    --d-base: #505050;
+    --l-txt: #FFFFFF;
+    --d-txt: #21201F;
+    --l-accent: #FAFAFA; /*-- bbgd - blocks background--*/
+    --d-accent: #00CA50;    
+    --l-links: #5fafde;
+    --d-links: #1e6893;
+    --l-disabled: #9b9b9b;
+    --d-disabled: #8d8d8d;
+    /*--end color scheme--*/
+    /*--fonts--*/
+    --font-base: 'Base Text';
+    --font-decor: 'Decor Text';
+    /*--end fonts--*/
 }
-html, body {
-    min-height: 100vh;
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-base);
+    font-weight: 400;
+    font-size: 14px;
 }
 body {
-    background: ;
-    position: relative;
-    display: flex; /*--need check for a long time---*/
-    flex-flow: column; /*--need check for a long time---*/
-    font-family: 'Roboto Slab', serif;
-    font-weight: 300;
-    word-break: normal;
-    color: var(--color-text);
+    display: flex;
+    flex-flow: column;    
+    align-items: center;
+    position: relative;    
+    color: var(--d-txt);
+    background-color: var(--l-base);
 }
+/*-main-*/
+main {
+    box-sizing: border-box;
+}
+/*-end of main-*/
 
-/*---end general styles---*/
-
-/*---Typography---*/
-h1 {
-    font-weight: 400;
-}
-h2 {
-    font-weight: 600;
-}
-h3 {
-    font-weight: 600;
-}
-h4 {
-    font-weight: 600;
-}
-h5 {
-    font-weight: 700;
-}
-h6 {
-    color: var(); 
-    font-weight: 700;
-}
-a, a:visited {
-    color: var();
-    text-decoration: none;
-    margin: 0;
-    white-space: nowrap;
-}
-b {
-    font-weight: 600;
-}
-p, h1, h2, h3, h4, ul {
-    text-indent: 24px;
-}
-
-ul {
-    margin-top: 10px;
-}
-.hashtags {
-    word-break: break-word;
-}
-/*--- Next is template css for plain svg, and not checked for font-icons or background: url(''). Sometimes I work with <object> and prepare Web Components from svg. It's giving advantage to work with styles animation and behaviour with eas. Chek if interested on github. Otherwise, You can skip this rules,  by adding comment, even remove them completely---*/
-
-svg-item, .svg-item {
-    position: relative;
-    display: inline-block;
-    z-index: -1;
-}
-svg-item.txt-SVG-item, .svg-item.txt-SVG-item {
-  width: 25px;
-  height: 25px;
-}
-
+/*-general-*/
+/*--general-classes--*/
+/*---flex classes---*/
 .f-centered {
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
-/*positioning adaptivness*/
-/*---article mostly using for blog, either posts---*/
-main, nav, footer, article {
-    padding: 0 10%;
+.f-centered-column {
+    display: flex;
+    flex-flow: column;
 }
-main {
-    display: flex;    
-    flex: 1 0 auto;
-    max-width: 100%;
+.f-justified {
+    text-align: justify;
+}
+.f-aligned {
+    align-items: center;
+}
+.touch {
+    display: none;
+}
+/*---end of flex classes---*/
+/*--end of general classes--*/
+/*-end of general-*/
+/*--------------------*/
+/*---elements---*/
+.button, a.button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: var(--d-accent);
+    color: #fff;
+    font-weight: bold;
+}
+.button-l {
+    line-height: 38px;
+    border-radius: 56px;
+    font-size: 2.05rem;
+    padding: 50px 128px;
+} 
+.button-m {    
+    line-height: 28px;
+    padding: 0px 54px;
+    line-height: 54px;
+    border-radius: 24px;
+    font-size: 1.55rem;
+}
+.button-s {
+    line-height: 24px;
+    padding: 0 51px;
+    border-radius: 18px;
+    font-size: 1.1rem;
+}
+/*---end of buttons---*/
+/*---gaps---*/
+div.gap-l {
+    height: 160px;
+}
+div.gap-m {
+    height: 110px;
+}
+div.gap-s {
+    height: 60px;
+}
+/*---end of gaps---*/
+/*--end of elements--*/
+
+/*--Typography--*/
+h1, h2, h3, h4, h5, h6, .bold {
+    font-weight: bold;
+}
+h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0 4px 0 0;
+    padding: 0;
 }
 
-/*---Further are media queries, which help with adaptivness.
-As seen, there is not many rules, I simply check, and add some when it works.
-DRY KISS YAGNEE---*/
+h2 {
+    font-size: 2rem;   
+    font-weight: bold; 
+}
 
-@media (max-width: 1199.98px) {}
+h3 {   
+    font-size: 1.5rem;
+}
+
+h4 {    
+    font-size: 1.25rem;
+    margin: 0.5rem;   
+}
+
+h5 {
+      font-size: 1.05rem;
+}
+h6 {
+    font-size: 0.85rem;
+}
+
+a,
+a:visited {
+    color: var(--d-txt);
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+a>img{
+    height: inherit;
+}
+
+
+/*--end of typography--*/
+
+
+/*--animations--*/
+
+/*--end animations--*/
+
+
+@media (max-width: 1199.98px) {
+    
+}
 
 @media (max-width: 991.98px) {
-    main, nav, footer, article {
-        padding: 0 5%;
+    .wider991 {
+        display: none;
     }
-    p, h1, h2, h3, h4, ul {
-        text-indent: 19px;
-    }
-    a, a:visited {       
-        white-space: normal;
-    }
-   
 }
 
 @media (max-width: 767.98px),
 (orientation: portrait) {
-    main, nav, footer {
-        padding: 0 1%;
-    } 
-    article {
-        padding: 0 4%;
+    .wider768 {
+        display: none;
     }
-    p, h1, h2, h3, h4, ul {
-        text-indent: 15px;
+}
+@media (max-width: 575.98px) {
+    .wider576 {
+        display: none;
     }
-    
 }
 
-@media (max-width: 575.98px) {
-    article {
-        padding: 0 3%;
-    }
-}
-/*---Please, notice that , this is template only, not the library in any event.
-Scoped css, web components and other modern throwing away all this bullsheet, such as col-md, md-xl, md-xxl, large , md12-13-14,  col-256 and other class and general hell. Good luck in coding---*/
+/*--end of @queries--*/
+/*--animations--*/
+/*--end of animations--*/
+
+
+/*--test styles--*/
+/* header, main, footer, nav, section, div, form, input,  ul, li, p, h1, h2, h3, h4, h5, h6 {
+    border: 1px dashed lightblue    
+} */
+/*--end of test styles--*/
