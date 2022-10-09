@@ -20,7 +20,7 @@
 
 :root {
     /*--color scheme--*/
-    --l-base: #96eff6;
+    --l-base: #d5fcff;
     --d-base: #505050;
     --l-txt: #FFFFFF;
     --d-txt: #21201F;
@@ -49,6 +49,15 @@ body {
     position: relative;    
     color: var(--d-txt);
     background-color: var(--l-base);
+}
+body>* {/*simply remove or comment this Rule when you need another behaviour*/
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+section {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 /*-main-*/
 main {
@@ -85,11 +94,10 @@ main {
 /*---elements---*/
 .button, a.button {
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     background: var(--d-accent);
-    color: #fff;
+    color: var(--l-txt);
     font-weight: bold;
 }
 .button-l {
@@ -113,13 +121,13 @@ main {
 }
 /*---end of buttons---*/
 /*---gaps---*/
-div.gap-l {
+.gap-l {
     height: 160px;
 }
-div.gap-m {
+.gap-m {
     height: 110px;
 }
-div.gap-s {
+.gap-s {
     height: 60px;
 }
 /*---end of gaps---*/

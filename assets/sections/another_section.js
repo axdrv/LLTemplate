@@ -1,4 +1,4 @@
-export class HowToSection extends HTMLElement {
+export class AnotherSection extends HTMLElement {
     constructor () {
         super();        
     }

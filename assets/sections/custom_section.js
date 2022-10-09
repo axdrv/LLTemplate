@@ -1,4 +1,4 @@
-export class HowToSection extends HTMLElement {
+export class CustomSection extends HTMLElement {
     constructor () {
         super();        
     }
@@ -16,9 +16,10 @@ export class HowToSection extends HTMLElement {
     }
     render() {
         this.innerHTML = `
-        <style>           
+        <style>            
         </style> 
-        <section>
+        <section>          
+          <button-item></button-item>
         </section>
         `;
     }

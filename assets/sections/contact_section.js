@@ -16,13 +16,10 @@ export class ContactSection extends HTMLElement {
     }
     render() {
         this.innerHTML = `
-        <style>
-        
+        <style>            
         </style> 
-        <section class="contact">            
-            I am Contact Section
+        <section>
         </section>
-        </div>
         `;
     }
 }

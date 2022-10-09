@@ -1,5 +1,5 @@
-export class ChangeNameAround extends HTMLElement {
-    constructor () { // this is template only
+export class GlobalBackgroundItem extends HTMLElement {
+    constructor () {
         super();        
     }
     connectedCallback() {  
@@ -17,15 +17,16 @@ export class ChangeNameAround extends HTMLElement {
     render() {
         this.innerHTML = `
         <style>
-            
-            @media (max-width: 767.98px),
-            (orientation: portrait) {
-                
-            }
+        global-background-item {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;            
+            bottom: 0;
+            background-color: yellow;
+            z-index: -10;
+        }
         </style> 
-        <section>
-
-        </section>        
         `;
     }
 }

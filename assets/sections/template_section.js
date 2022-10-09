@@ -1,5 +1,5 @@
-export class HowToSection extends HTMLElement {
-    constructor () {
+export class ChangeNameAround extends HTMLElement {
+    constructor () { //this is template only
         super();        
     }
     connectedCallback() {  
@@ -16,10 +16,12 @@ export class HowToSection extends HTMLElement {
     }
     render() {
         this.innerHTML = `
-        <style>           
+        <style>
+
         </style> 
         <section>
-        </section>
+
+        </section>        
         `;
     }
 }
