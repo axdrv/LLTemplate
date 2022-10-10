@@ -1,4 +1,4 @@
-export class ButtonItem extends HTMLElement {
+export class IntroSection extends HTMLElement {
     constructor () {
         super();        
     }
@@ -17,9 +17,10 @@ export class ButtonItem extends HTMLElement {
     render() {
         this.innerHTML = `
         <style>
-        
-        </style> 
-        <a class="button button-l">button-item</a>
+           
+        </style>        
+        <section>
+        </section> 
         `;
     }
 }

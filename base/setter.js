@@ -1,8 +1,6 @@
 // import some special elements and components here. Take care about import order to avoid error 'undefined' 
 //import { SomeItem } from '/assets/components/some_item.js';
 //customElements.define('some-item', SomeItem);
-import { ButtonItem } from '/assets/components/button_item.js';
-customElements.define('button-item', ButtonItem);
 import { GlobalBackgroundItem } from '/assets/components/global_background_item.js';
 customElements.define('global-background-item', GlobalBackgroundItem);
 

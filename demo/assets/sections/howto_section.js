@@ -1,4 +1,4 @@
-export class GlobalBackgroundItem extends HTMLElement {
+export class HowToSection extends HTMLElement {
     constructor () {
         super();        
     }
@@ -16,17 +16,10 @@ export class GlobalBackgroundItem extends HTMLElement {
     }
     render() {
         this.innerHTML = `
-        <style>
-        global-background-item {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;            
-            bottom: 0;
-            background-color: yellow;
-            z-index: -10;
-        }
+        <style>           
         </style> 
+        <section>
+        </section>
         `;
     }
 }
