@@ -1,6 +1,10 @@
-import {myModule} from '/assets/modules/my_module.js'
-import {isTouchDevice} from '/assets/modules/isTouch.js'
+import {isTouchDevice} from '/assets/modules/isTouch.js';
+import {XY} from '/assets/modules/XY.js';
 
 let isTouch = isTouchDevice();
-
-console.log(myModule);
+document.addEventListener('DOMContentLoaded', ()=>{
+	XY.initXY();
+});
+window.addEventListener('resize', ()=>{
+	XY.initXY();
+});

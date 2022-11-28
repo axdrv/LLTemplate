@@ -23,11 +23,10 @@ export class GlobalBackgroundItem extends HTMLElement {
             right: 0;
             top: 0;            
             bottom: 0;
-            background-color: var(--l-disabled);
+            background: linear-gradient(180deg, #ee7752, #7D2767,  #5802BB, #210549);
             z-index: -10;
         }
         </style> 
-        
-        `;
+        `;                 
     }
 }

@@ -1,1 +1,0 @@
-export let myModule = "Hello World!";

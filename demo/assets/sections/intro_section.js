@@ -17,10 +17,19 @@ export class IntroSection extends HTMLElement {
     render() {
         this.innerHTML = `
         <style>
-           
+            section.intro {
+            }
+            h1 {
+                color: var(--l-base);
+                font-weight: 600;
+                text-align: center;
+                position: sticky;
+                top: 200px;
+            }
         </style>        
-        <section>
+        <section class="intro">
+            <h1>Привет Мир!</h1>
         </section> 
-        `;
+        `;        
     }
 }

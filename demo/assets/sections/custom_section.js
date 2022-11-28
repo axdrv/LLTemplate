@@ -19,7 +19,6 @@ export class CustomSection extends HTMLElement {
         <style>            
         </style> 
         <section>          
-          <a class="button button-m">aButton</a>
         </section>
         `;
     }

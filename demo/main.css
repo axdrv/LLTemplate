@@ -7,14 +7,15 @@
 
 /*--connetcting fonts&icons--*/
 /* Connect below the font シ you choose for your site (¬‿¬ )*/
-/* @font-face {
-    font-family: 'Base Text';
-    src: url('/assets/fonts/base_text.eot');    
-} */
-/* @font-face {
-    font-family: 'Decor Text', serif;
-    src: url('/assets/fonts/decor_text.eot');    
-} */
+@font-face {
+    font-family: 'Raleway'; 
+    src: url('/assets/styles/fonts/Raleway.ttf')  format('truetype');    
+} 
+@font-face {
+    font-family: 'Raleway'; 
+    src: url('/assets/styles/fonts/Raleway-Italic.ttf')  format('truetype');
+    font-style: italic;    
+}
 /*--end fonts connect--*/
 /*---general styles---*/
 
@@ -32,19 +33,19 @@
     --d-disabled: #8d8d8d;
     /*--end color scheme--*/
     /*--fonts--*/
-    --font-base: 'Base Text';
+    --font-base: 'Raleway';
     --font-decor: 'Decor Text';
     /*--end fonts--*/
 }
 html {
     scroll-behavior: smooth;
-    font-family: var(--font-base);
-    font-weight: 400;
-    font-size: 14px;
+    font-family: var(--font-base);    
 }
 body {
     position: relative;
-    font-family: var(--font-base), sans-serif;    
+    font-family: var(--font-base), sans-serif; 
+    font-weight: 400;
+    font-size: 14px;
     color: var(--d-txt);
     background-color: var(--l-base);
 }
@@ -53,13 +54,23 @@ body>* {/*simply remove or comment this Rule if you need another behaviour*/
     width: 100%;
     max-width: 100%;
 }
-section {
-    max-width: 1000px;
+header-section, main>*, footer-section {
+    display: block;
+    width: 100%;
+}
+header, section, footer {
+    max-width: 1100px;
     margin: 0 auto;
 }
+
 /*-main-*/
 main {
+    width: inherit;
     box-sizing: border-box;
+}
+
+section {
+    height: 150vh;
 }
 /*-end of main-*/
 
