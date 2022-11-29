@@ -32,6 +32,12 @@
     --l-disabled: #9b9b9b;
     --d-disabled: #8d8d8d;
     /*--end color scheme--*/
+    /*--colors for demo--*/
+    --intro-section: #ee7752;
+    --about-section: #7d2767;
+    --faq-section: #5802bb;
+    --custom-section: #210549;
+    --contact-section: #31283e;
     /*--fonts--*/
     --font-base: 'Raleway';
     --font-decor: 'Decor Text';

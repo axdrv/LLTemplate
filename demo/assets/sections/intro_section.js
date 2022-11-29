@@ -1,6 +1,6 @@
 export class IntroSection extends HTMLElement {
     constructor () {
-        super();        
+        super(); 
     }
     connectedCallback() {  
         this.render();

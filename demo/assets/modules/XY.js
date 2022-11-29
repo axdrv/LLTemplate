@@ -8,6 +8,6 @@ export let XY = {
         this.wh = document.documentElement.clientHeight;
         this.hlf = document.documentElement.clientHeight/2;
         this.k = (1/((this.dh/this.wh)-1))+1;
-        if (!isFinite(this.k)) this.k=0;
+        if (!isFinite(this.k)) this.k=0;        
     }
 }
