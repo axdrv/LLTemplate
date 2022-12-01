@@ -1,3 +1,4 @@
+//In this exported object all the logic consern geometry and elements coordinates 
 export let XY = {
     dh: document.documentElement.scrollHeight,//document height 
     wh: document.documentElement.clientHeight,//window height
@@ -9,5 +10,5 @@ export let XY = {
         this.hlf = document.documentElement.clientHeight/2;
         this.k = (1/((this.dh/this.wh)-1))+1;
         if (!isFinite(this.k)) this.k=0;        
-    }
+    }   
 }

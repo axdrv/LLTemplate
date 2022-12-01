@@ -4,84 +4,88 @@ export class HeaderSection extends HTMLElement {
         this.sections = [
             {
                 tag: 'INTRO-SECTION',
-                name: 'Intro Section',
+                name: 'Блок Приветствие',
                 bgnd: "var(--intro-section)"
         
             },
             {
                 tag: 'ABOUT-SECTION',
-                name: 'About Section',
+                name: 'Блок "О нас"',
                 bgnd: "var(--about-section)"
         
             },
             {
                 tag: 'FAQ-SECTION',
-                name: 'F.A.Q. Section',
+                name: 'Блок Вопросы',
                 bgnd: "var(--faq-section)"
         
             },
             {
                 tag: 'CUSTOM-SECTION',
-                name: 'Custom Section',
+                name: 'Отдельный блок',
                 bgnd: "var(--custom-section)"
         
             },
             {
                 tag: 'CONTACT-SECTION',
-                name: 'Contact Section',
+                name: 'Блок Контактов',
                 bgnd: "var(--contact-section)"
         
             }            
         ];
-        this.onScene = '';
+        this.sectionName = ''
     }
 
     connectedCallback() {
-        this.render(); //
+        this.render();
     }
     static get observedAttributes() {
         return ['onscene'];
     }
     attributeChangedCallback(attr, prev, next) {
         if(prev !== next) {
-          this[`${attr}`] = next;
-          this.render();
+            this[`${attr}`] = next;
+            this.render();
         }
-    }
+    }  
     render() { 
         this.innerHTML = `
         <style>
             header-section {
                 position: fixed;
                 top: 0;
-                height: 127px;
-                background: #dc143cdd;
+                height: 77px;
                 z-index: 1000;
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-end;
+                box-shadow: 0px -3px 30px #93141461;
             }
             header {
                 display: flex;
-                flex-flow: column;
                 align-items: center;
                 justify-content: center;
-                height: inherit;
+                overflow: hidden;
             }
             .onSceneIndicators {
                 width: 100%;
-                height: 24px;
+                height: 4px;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: stretch;
                 align-content: stretch;
-                background-color: grey;                
             }
             .onSceneIndicator {
                 flex: 1 0 auto;
             }
-            header>p {
+            #sectionName {
                 font-size: 1.5rem;
+                line-height: 1;
+                margin: 20px;
                 font-weight: bold;
                 color: var(--l-base);
-            }
+                
+            }           
             @media (max-width: 1199.98px) {
                 
             }
@@ -98,26 +102,24 @@ export class HeaderSection extends HTMLElement {
             @media (max-width: 575.98px) {
             }
         </style>
-        <div class="onSceneIndicators"></div>
+        
         <header>
             <p id="sectionName"></p>
-        </header>                
-        `;   
-        let indicators = this.querySelector('.onSceneIndicators'),
-        sectionName = this.querySelector('#sectionName');
-        indicators.innerHTML = '';
+        </header>
+        <div class="onSceneIndicators">
+            <div class="onSceneIndicator" style="background-color: var(--intro-section);"></div>
+            <div class="onSceneIndicator" style="background-color: var(--about-section);"></div>
+            <div class="onSceneIndicator" style="background-color: var(--faq-section);"></div>
+            <div class="onSceneIndicator" style="background-color: var(--custom-section);"></div>
+            <div class="onSceneIndicator" style="background-color: var(--contact-section);"></div>
+        </div>   
+        `;
+        this.sectionName = this.querySelector('#sectionName');
         for (let section of this.sections) {
-            let indicator = document.createElement('div');
-            indicator.classList.add('onSceneIndicator');
-            indicator.style.backgroundColor = section.bgnd;
-            indicators.appendChild(indicator);
             if (section.tag==this.getAttribute('onscene')) {
-                this.onScene = section.name;
-                sectionName.innerText = `${this.onScene}`;
+                this.sectionName.innerText = section.name; 
                 this.style.backgroundColor = section.bgnd;
             };
         }
-
-            
-    }
+    }    
 }
