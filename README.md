@@ -1,3 +1,3 @@
 # LL_template
-Pure HTML CSS JS templates
-Light Landing template based on Web Components.
+Pure HTML CSS JS template
+Light Landing pages template based on Web Components.
