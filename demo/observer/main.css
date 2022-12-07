@@ -27,15 +27,15 @@
     --d-txt: #21201F;
     --l-accent: #FAFAFA; /*-- bbgd - blocks background--*/
     --d-accent: #00CA50;    
-    --l-links: #5fafde;
+    --l-links: #73c1ef;
     --d-links: #1e6893;
     --l-disabled: #9b9b9b;
     --d-disabled: #8d8d8d;
     /*--end color scheme--*/
     /*--colors for demo--*/
-    --intro-section: #ee7752;
-    --about-section: #7d2767;
-    --faq-section: #5802bb;
+    --intro-section: #48d458;
+    --about-section: #277d6f;
+    --faq-section: #4e1e86;
     --custom-section: #210549;
     --contact-section: #31283e;
     /*--fonts--*/
@@ -44,15 +44,15 @@
     /*--end fonts--*/
 }
 html {
-    scroll-behavior: smooth;
-    font-family: var(--font-base);    
+    /* scroll-behavior: smooth; */
+    font-family: var(--font-base); 
+    font-size: 16px;   
 }
 body {
     position: relative;
     font-family: var(--font-base), sans-serif; 
     font-weight: 400;
-    font-size: 14px;
-    color: var(--d-txt);
+    color: var(--l-base);
     background-color: var(--l-base);
 }
 body>* {/*simply remove or comment this Rule if you need another behaviour*/
@@ -60,7 +60,7 @@ body>* {/*simply remove or comment this Rule if you need another behaviour*/
     width: 100%;
     max-width: 100%;
 }
-header-section, main>*, footer-section {
+header-item, main>*, footer-item {
     display: block;
     width: 100%;
 }
@@ -76,7 +76,8 @@ main {
 }
 
 section {
-    height: 150vh;
+    padding-top: 100px;
+    min-height: 90vh;
 }
 /*-end of main-*/
 
@@ -87,9 +88,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
-.f-centered-column {
+.f-column {
     display: flex;
     flex-flow: column;
 }
@@ -106,7 +106,7 @@ section {
 /*--end of general classes--*/
 /*-end of general-*/
 /*--------------------*/
-/*---elements---*/
+/*-elements-*/
 .button, a.button {
     display: inline-block;
     font-weight: bold;
@@ -126,6 +126,32 @@ section {
     padding: 0 51px;
 }
 /*---end of buttons---*/
+/*--icons--*/
+.icon-s, .icon-m, .icon-l, .icon-xl {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-s {
+    width: 16px;
+    height: 16px;    
+    background-size: 14px;
+}
+.icon-m {
+    width: 24px;
+    height: 24px;
+    background-size: 18px;
+}
+.icon-l {
+    width: 32px;
+    height: 32px;
+    background-size: 28px;
+}
+.icon-xl {
+    width: 48px;
+    height: 48px;
+    background-size: 42px;
+}
+/*--end icons--*/
 /*---gaps---*/
 .gap-l {
     height: 160px;
@@ -136,12 +162,13 @@ section {
 .gap-s {
     height: 60px;
 }
-/*---end of gaps---*/
-/*--end of elements--*/
+/*---end gaps---*/
+/*-end elements-*/
 
 /*--Typography--*/
 h1, h2, h3, h4, h5, h6, .bold {
     font-weight: bold;
+    color: var(--l-base);
 }
 h1 {
     font-size: 3rem;
@@ -152,7 +179,6 @@ h1 {
 
 h2 {
     font-size: 2rem;   
-    font-weight: bold; 
 }
 
 h3 {   
@@ -173,7 +199,7 @@ h6 {
 
 a,
 a:visited {
-    color: var(--d-txt);
+    color: var(--l-links);
     text-decoration: none;
     word-wrap: break-word;
 }
@@ -185,7 +211,9 @@ a:hover {
 a>img{
     height: inherit;
 }
-
+ul>li {
+    padding: 4px;
+}
 
 /*--end of typography--*/
 
@@ -203,12 +231,18 @@ a>img{
     .wider991 {
         display: none;
     }
+    header, section, footer {
+        margin: 0 6%;
+    }
 }
 
 @media (max-width: 767.98px),
 (orientation: portrait) {
     .wider768 {
         display: none;
+    }
+    header, section, footer {
+        margin: 0 4%;
     }
 }
 @media (max-width: 575.98px) {

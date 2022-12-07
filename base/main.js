@@ -1,10 +1,19 @@
-import {isTouchDevice} from '/assets/modules/isTouch.js';
-import {XY} from '/assets/modules/XY.js';
+import {XY} from '/assets/globals/XY.js';
+import {HeaderItem, FooterItem} from '/assets/layout/layout.js';
+import {sections} from '/assets/sections/sections.js'
+let main = document.querySelector('main');
+for (let section of sections)
+{
+    main.appendChild(section);
+}
 
-let isTouch = isTouchDevice();
+
+//global Listeners
 document.addEventListener('DOMContentLoaded', ()=>{
-	XY.initXY();
+    XY.initXY();
 });
 window.addEventListener('resize', ()=>{
-	XY.initXY();
+    XY.initXY();
 });
+
+//Functions

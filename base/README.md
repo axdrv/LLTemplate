@@ -8,7 +8,9 @@
 * Try to keep this adaptive. 
 Good luck. 
 
-### Folder names
+### Folder structure
 
-* base is scratch template. To observe complete version, please check 'demo' folder;
-* 'Components' folder includes some ready components, sections, items, etc to insert in a project or supersede existed;
+* The folders 'base' and 'demo' considered as cores. To obtain proper work You need run server directly from these foldrers; 
+* base is scratch template. Alternatively it's an empty project, you can modify any way you like; 
+* To review complete version, copy and start on the local server 'demo' folder;
+* 'Components' folder includes some ready components, sections, items, etc. to insert in a project or supersede existed items instead;

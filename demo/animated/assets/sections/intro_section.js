@@ -1,6 +1,7 @@
 export class IntroSection extends HTMLElement {
     constructor () {
-        super(); 
+        super();
+        this.header = "Привет, Мир!";        
     }
     connectedCallback() {  
         this.render();
@@ -16,19 +17,31 @@ export class IntroSection extends HTMLElement {
     }
     render() {
         this.innerHTML = `
-        <style>
-            section.intro {
+        <style>            
+            
+            @media (max-width: 1199.98px) {
+                
             }
-            h1 {
-                color: var(--l-base);
-                font-weight: 600;
-                text-align: center;
-                position: sticky;
-                top: 200px;
+
+            @media (max-width: 991.98px) {
+                .stack {
+                    height: 400px;
+                }
+                .stack-card:nth-child(2), .stack-card:nth-child(3) {
+                    left: calc(50% - 105px);
+                }
+            }
+
+            @media (max-width: 767.98px),
+            (orientation: portrait) {
+                
+            }
+            @media (max-width: 575.98px) {
+               
             }
         </style>        
-        <section class="intro">
-            <h1>Привет Мир!</h1>
+        <section class="intro-section">
+            <h2 style="text-align: center;">Страница в разработке</a></h2>            
         </section> 
         `;        
     }

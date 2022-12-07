@@ -1,6 +1,6 @@
 export class ChangeNameAround extends HTMLElement {
     constructor () { //this is template only
-        super();        
+        super();             
     }
     connectedCallback() {  
         this.render();
