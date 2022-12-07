@@ -40,9 +40,9 @@ export class FooterItem extends HTMLElement {
                 }                
             </style>
             <footer>
-                <a class="aFooter" href="">Скачать базовый шаблон</a>
-                <a class="aFooter" href="">Смотреть анимированный шаблон</a>
-                <a class="aFooter" href="">Загрузить этот шаблон</a>
+                <a class="aFooter" href="">Скачать шаблон</a>
+                <a class="aFooter" href="">Смотреть пример</a>
+                <a class="aFooter" href="">Загрузить шаблон</a>
             </footer>
         `;        
     }        
