@@ -1,7 +1,7 @@
 # LLTemplate
  Pure HTML CSS JS template
 
-## Light Landing page template.
+## Light template for Landing pages .
 
 * Pure and light template for programmers, uses HTML+CSS+JS. There is no compillers, SCSS, PUG, etc, hovewer component approach based on Web Components standart.
 * main.css file in the core keep light, well commented and ready for adaptiveness without any libs, compillers. Well, `normalize.css` is included.
