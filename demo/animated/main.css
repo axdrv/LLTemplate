@@ -197,7 +197,7 @@ a,
 a:visited {
     color: var(--l-links);
     text-decoration: none;
-    word-wrap: break-word;
+    word-wrap: break-all;
 }
 
 a:hover {

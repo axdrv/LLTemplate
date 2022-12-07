@@ -56,6 +56,8 @@ export class ContactCard extends HTMLElement {
             } 
             .card-content_share-and-link_description {
                 padding-right: 32px;
+                max-width: 80%;
+                text-align: right;
             }  
             .card-content_share-and-link_buttons {
                display: flex;
@@ -96,6 +98,9 @@ export class ContactCard extends HTMLElement {
                 contact-card {
                     width: 85%;
                 }
+                .card-content_share-and-link_buttons {
+                    flex-flow: column;
+                    }
             }
             @media (max-width: 575.98px) {                
             }

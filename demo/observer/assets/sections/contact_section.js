@@ -79,7 +79,10 @@ export class ContactSection extends HTMLElement {
             let content = card.querySelector('.contact-card-content'); 
             content.innerHTML=cardData.content;
             let linkdesc = card.querySelector('.card-content_share-and-link_description');
-            linkdesc?linkdesc.innerText = cardData.url:false;
+            if(linkdesc) {
+                linkdesc.innerText = cardData.url;
+                linkdesc.setAttribute('href', cardData.url)
+            }            
             let clink = card.querySelector('.copyLink');
             clink?copylink(clink, 'icon-m', cardData.url):false;
             let shLink = card.querySelector('.ya-share2');
