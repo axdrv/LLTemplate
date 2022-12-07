@@ -11,18 +11,19 @@ export class ContactSection extends HTMLElement {
                 header: 'Страница проекта',
                 content: '<div class="card-content_share-and-link"><a class="card-content_share-and-link_description"></a><div class="card-content_share-and-link_buttons"><div class="ya-share2" data-copy="hidden" data-curtain data-color-scheme="blackwhite" data-limit="0" data-more-button-type="short" data-popup-direction="auto" data-services="telegram,messenger,moimir,whatsapp"></div><div class="copyLink"></div></div></div>',
                 iconUrl: 'url("/assets/styles/icons/github_icon_eyes.svg")',
-                url: 'https://'
+                url: 'https://github.com/axdrv/LLTemplate'
             },
             {
                 header: 'Обсуждения',
                 content: '<div class="card-content_share-and-link"><a class="card-content_share-and-link_description"></a><div class="card-content_share-and-link_buttons"><div class="ya-share2" data-copy="hidden" data-curtain data-color-scheme="blackwhite" data-limit="0" data-more-button-type="short" data-popup-direction="auto" data-services="telegram,messenger,moimir,whatsapp"></div><div class="copyLink"></div></div></div>',
                 iconUrl: 'url("/assets/styles/icons/vk_2colors_icon.svg")',
-                url: 'https://'
+                url: 'https://vk.com/public217633675'
             },
             {
                 header: 'Ссылка на эту страницу',
                 content: '<div class="card-content_share-and-link"><a class="card-content_share-and-link_description"></a><div class="card-content_share-and-link_buttons"><div class="ya-share2" data-copy="hidden" data-curtain data-color-scheme="blackwhite" data-limit="0" data-more-button-type="short" data-popup-direction="auto" data-services="telegram,messenger,moimir,whatsapp"></div><div class="copyLink"></div></div></div>',
-                url: 'https://'
+                iconUrl: 'url("/assets/styles/icons/vercel_icon.svg")',
+                url: 'https://lltemplate.vercel.app/'
             },
             {
                 header: 'Проекты на LLTemplate',
@@ -47,6 +48,11 @@ export class ContactSection extends HTMLElement {
     render() {
         this.innerHTML = `
         <style>
+            section.contact-section {
+                min-height: auto;
+                height: auto;
+                padding-bottom: 200px;
+            }
             .cards-section {
             }
             .cards-section {
@@ -57,7 +63,7 @@ export class ContactSection extends HTMLElement {
             }
         </style>
         <a name="Контакты"></a>
-        <section>
+        <section class="contact-section">
             <div class="cards-section"></div>            
             
         </section>

@@ -51,9 +51,15 @@ export class ContactCard extends HTMLElement {
                 width: 100%;
                 display: flex;
                 flex-flow: row;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: flex-end;
-            }            
+            } 
+            .card-content_share-and-link_description {
+                padding-right: 32px;
+            }  
+            .card-content_share-and-link_buttons {
+               display: flex;
+            }         
             .ya-share2__link, .ya-share2__link_more, .ya-share2__link_more-button-type_short {
                 width: 24px;
                 height: 24px;
