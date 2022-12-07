@@ -1,4 +1,4 @@
-# LL_Template
+# LLTemplate
  Pure HTML CSS JS template
 
 ## Light Landing page template.
