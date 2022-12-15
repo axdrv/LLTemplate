@@ -5,12 +5,15 @@ export let XY = {
     hlf: document.documentElement.clientHeight/2, // Use half of the screen uses in scrollHandler function in main.js when need activate animated sections.
     quarter: document.documentElement.clientHeight/4,
     k: 0,//coefficient nullifies difference between dh and max Y offset. i.e. when you need max pageYoffset same with document height do some 'let offset = window.pageYOffset*XY.k;'  in a module imported XY.js
+    lastScrollTop: window.pageYOffset || document.documentElement.scrollTop,
+    scollDir: '',    
     initXY () {
         this.dh = document.documentElement.scrollHeight;
         this.wh = document.documentElement.clientHeight;
         this.hlf = document.documentElement.clientHeight/2;
         this.quarter = document.documentElement.clientHeight/4;
         this.k = (1/((this.dh/this.wh)-1))+1;
-        if (!isFinite(this.k)) this.k=0;        
+        if (!isFinite(this.k)) this.k=0;
+        this.lastScrollTop = window.pageYOffset || document.documentElement.scrollTop        
     }   
 }

@@ -41,8 +41,8 @@ export class FooterItem extends HTMLElement {
             </style>
             <footer>
                 <a class="aFooter" href="https://github.com/axdrv/LLTemplate">Скачать базовый шаблон</a>
-                <a class="aFooter" href="https://llt-animated.vercel.app/">Смотреть анимированный шаблон</a>
-                <a class="aFooter" href="https://github.com/axdrv/LLTemplate/tree/main/demo/observer">Загрузить этот шаблон</a>
+                <a class="aFooter" href="https://lltemplate.vercel.app/">Смотреть образец без анимации</a>
+                <a class="aFooter" href="https://github.com/axdrv/LLTemplate">Загрузить этот шаблон</a>
             </footer>
         `;        
     }        

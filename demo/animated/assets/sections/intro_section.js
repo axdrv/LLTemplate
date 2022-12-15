@@ -1,9 +1,10 @@
 export class IntroSection extends HTMLElement {
     constructor () {
         super();
-        this.header = "Привет, Мир!";        
+        this.header = "Привет, Мир!";
+        this.bgnd = '#48d458';        
     }
-    connectedCallback() {  
+    connectedCallback() {
         this.render();
     } 
     static get observedAttributes() {
@@ -15,10 +16,60 @@ export class IntroSection extends HTMLElement {
           this.render();
        }
     }
+    clickSniffer() {
+        console.log(this);
+    }
     render() {
         this.innerHTML = `
-        <style>            
-            
+        <style>
+            intro-section {
+                overflow-x: hidden;
+            }
+            section.intro-section {
+                padding-top: 150px;
+                font-weight: 600;
+                text-align: center;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-evenly;
+            }
+            h2 {
+                font-weight: 300;
+                line-height: 1;
+                margin: 12px;
+            }
+            .stack {
+                margin: 52px 0;
+                height: 210px;
+                position: relative; 
+            }
+            .stack-card {
+                position: absolute;
+                width: 210px;
+                height: 210px;
+                border-radius: 50%;
+                background: radial-gradient(circle at center, #ffffff99,  #ffffff55);                
+                border: 2px solid #ffffffaa;
+                color: var(--d-txt);
+                font-size: 2rem;
+                font-weight: 300;
+            }
+            .stack-card:first-child {
+                top: calc(50% - 105px);
+                left: calc(20% - 105px);
+            }
+            .stack-card:nth-child(2) {
+                top: 0;
+                left: calc(40% - 105px);
+            }
+            .stack-card:nth-child(3) {
+                bottom: 0;
+                left: calc(60% - 105px);
+            }
+            .stack-card:nth-child(4) {
+                top: calc(50% - 105px);
+                left: calc(80% - 105px);
+            }
             @media (max-width: 1199.98px) {
                 
             }
@@ -41,8 +92,19 @@ export class IntroSection extends HTMLElement {
             }
         </style>        
         <section class="intro-section">
-            <h2 style="text-align: center;">Страница в разработке</a></h2>            
+            <h1>Шаблон Лендингов</h1>
+            <p>пример страницы с анимацией</p>
+            <h2>Лёгкая бесплатная заготовка</h2>
+            <h2>для свободного творчества</h2>
+            <h2>в создании креативных</h2>
+            <h2>интернет страниц</h2>
+            <div class="stack">
+                <div class="stack-card f-centered">HTML5</div>
+                <div class="stack-card f-centered">CSS3</div>
+                <div class="stack-card f-centered">ES6</div>
+                <div class="stack-card f-centered">Web Components</div>
+            </div>
         </section> 
-        `;        
+        `;         
     }
 }

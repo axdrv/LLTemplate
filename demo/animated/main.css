@@ -34,13 +34,16 @@
     --d-disabled: #8d8d8d;
     /*--end color scheme--*/
     /*--colors for demo--*/
-    --intro-section: #48d458;   
+    --intro-section: #48d458;
+    --faq-section: #113cab;  
+    --custom-section: #152d69;
+    --contact-section: #353e53;     
     /*--fonts--*/
     --font-base: 'Raleway';
     /*--end fonts--*/
 }
 html {
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     font-family: var(--font-base); 
     font-size: 16px;   
 }
@@ -48,8 +51,8 @@ body {
     position: relative;
     font-family: var(--font-base), sans-serif; 
     font-weight: 400;
-    color: var(--d-base);
-    background-color: var(--l-base);   
+    color: var(--l-base);
+    background-color: var(--l-disabled);   
 }
 body>* {/*simply remove or comment this Rule if you need another behaviour*/
     position: relative;
@@ -72,10 +75,10 @@ main {
     box-sizing: border-box;
 }
 
-/* section {
+section {
     padding-top: 100px;
     min-height: 90vh;
-} */
+}
 /*-end of main-*/
 
 /*-general-*/
@@ -220,7 +223,9 @@ ul>li {
 
 
 @media (max-width: 1199.98px) {
-    
+    header, section, footer {
+        margin: 0 3%;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -238,7 +243,7 @@ ul>li {
         display: none;
     }
     header, section, footer {
-        margin: 0 4%;
+        margin: 0 3%;
     }
 }
 @media (max-width: 575.98px) {
