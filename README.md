@@ -10,4 +10,4 @@ Good luck.
 
 
 
-* Пример/Demo is [здесь/here](https://lltemplate.vercel.app/). 
+* Пример [здесь](https://lltemplate.vercel.app/). 
