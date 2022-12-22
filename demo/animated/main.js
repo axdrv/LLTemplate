@@ -7,12 +7,12 @@ let clickListeners, main, headerItem, bgndItem;
 document.addEventListener('DOMContentLoaded', ()=>{
     init();
     XY.initXY();
-    for (let section of sections) {
+    sections.forEach(section=> {
         main.appendChild(section);                
-    }    
-    scrollHandler();
-    clickListeners = document.querySelectorAll('[clicklistener]');
+    })   
 });
+window.onload = () => {
+    scrollHandler();}
 window.addEventListener('resize', ()=>{
     XY.initXY();
     scrollHandler();
@@ -22,9 +22,10 @@ document.addEventListener('click', clickHandler, false);
 
 //Functions
 function init() {
-    main = document.querySelector('main');;
+    main = document.querySelector('main');
     headerItem = document.querySelector('header-item');
     bgndItem=document.querySelector('global-background-item');
+    clickListeners = document.querySelectorAll('[clicklistener]');
 }
 
 function scrollHandler () {

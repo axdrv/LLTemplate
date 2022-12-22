@@ -66,7 +66,7 @@ export class HeaderItem extends HTMLElement {
             menuHeader.innerHTML = section.header;
             headerMenu.appendChild(menuHeader)
             headerMenu.addEventListener('click', (e)=> {
-                setTimeout( () => {window.scrollTo({top: section.getBoundingClientRect().top+window.pageYOffset, behavior:'smooth'})}, 400);
+                setTimeout( () => {window.scrollTo({top: section.getBoundingClientRect().top+window.pageYOffset, behavior:'smooth'})}, 300);
             })
             this.querySelector('header').appendChild(headerMenu);
 
