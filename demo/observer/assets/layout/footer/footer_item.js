@@ -7,19 +7,17 @@ export class FooterItem extends HTMLElement {
             <style>
                 footer-item {                    
                     width: 100%;
-                    background: var(--contact-section);
                 }
                 footer {
-                    height: 77px;
+                    height: 50px;
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
                     align-items: center;
-                    color: var(--l-base);
                 }
                 footer a.aFooter {
                     font-weight: 600;
-                    color: var(--l-links);
+                    color: var(--d-txt);
                     margin: 10px 24px;
                 }
                 @media (max-width: 1199.98px) {                
@@ -40,9 +38,7 @@ export class FooterItem extends HTMLElement {
                 }                
             </style>
             <footer>
-                <a class="aFooter" href="https://github.com/axdrv/LLTemplate">Скачать базовый шаблон</a>
-                <a class="aFooter" href="https://ll-template.vercel.app/">Смотреть анимированный шаблон</a>
-                <a class="aFooter" href="https://github.com/axdrv/LLTemplate/tree/main/demo/observer">Загрузить этот шаблон</a>
+                <a class="aFooter" href="https://github.com/axdrv/LLTemplate">lltemplate</a>                
             </footer>
         `;        
     }        

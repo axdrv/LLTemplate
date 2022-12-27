@@ -3,6 +3,7 @@
 /* @import url(/assets/css/guidance.css); */
 /*--importing libs, local modules--*/
 @import url(/assets/styles/css/normalize.css);
+@import url(/assets/styles/css/project.css);
 /*--end importing libs, local modules--*/
 
 /*--connetcting fonts&icons--*/
@@ -33,32 +34,31 @@
     --d-disabled: #8d8d8d;
     /*--end color scheme--*/
     /*--colors for demo--*/
-    --intro-section: #48d458;
-    --about-section: #277d6f;
-    --faq-section: #4e1e86;
-    --custom-section: #210549;
-    --contact-section: #31283e;
+    --intro-section: #48d458;   
     /*--fonts--*/
     --font-base: 'Raleway';
-    --font-decor: 'Decor Text';
     /*--end fonts--*/
 }
 html {
     /* scroll-behavior: smooth; */
     font-family: var(--font-base); 
-    font-size: 16px;   
+    font-size: 16px;
+    height: 100%;   
 }
 body {
+    height: 100%;  
     position: relative;
     font-family: var(--font-base), sans-serif; 
     font-weight: 400;
-    color: var(--l-base);
-    background-color: var(--l-base);
+    color: var(--d-base);
+    background-color: var(--l-base); 
+    overflow: hidden;
 }
-body>* {/*simply remove or comment this Rule if you need another behaviour*/
+body>* {
     position: relative;
     width: 100%;
     max-width: 100%;
+    
 }
 header-item, main>*, footer-item {
     display: block;
@@ -75,10 +75,10 @@ main {
     box-sizing: border-box;
 }
 
-section {
+/* section {
     padding-top: 100px;
     min-height: 90vh;
-}
+} */
 /*-end of main-*/
 
 /*-general-*/
@@ -168,7 +168,6 @@ section {
 /*--Typography--*/
 h1, h2, h3, h4, h5, h6, .bold {
     font-weight: bold;
-    color: var(--l-base);
 }
 h1 {
     font-size: 3rem;
@@ -201,7 +200,7 @@ a,
 a:visited {
     color: var(--l-links);
     text-decoration: none;
-    word-wrap: break-word;
+    word-wrap: break-all;
 }
 
 a:hover {

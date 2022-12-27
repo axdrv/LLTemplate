@@ -1,8 +1,13 @@
 //components file defines components that around whole document
-import { GlobalBackgroundItem as globalBgnd } from '/assets/layout/global_background_item.js';
-customElements.define('global-background-item', globalBgnd);
-import { HeaderItem } from '/assets/layout/header_item.js';
-customElements.define('header-item', HeaderItem);
-import { FooterItem } from '/assets/layout/footer_item.js';
-customElements.define('footer-item', FooterItem);
-export {globalBgnd, HeaderItem, FooterItem}
+//import { HeaderItem } from '/assets/layout/header/header_item.js';
+import { FooterItem } from '/assets/layout//footer/footer_item.js';
+import { BackgroundItem } from '/assets/layout/bgnd/background_item.js';
+customElements.define('background-item', BackgroundItem);
+//customElements.define('header-item', HeaderItem)
+customElements.define('footer-item', FooterItem)
+
+export function initLayout(main) {
+    main.before(document.createElement('background-item'));
+    main.after(document.createElement('footer-item'))
+}
+
