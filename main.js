@@ -1,19 +1,31 @@
-import {XY} from '/assets/globals/XY.js';
-import {HeaderItem, FooterItem} from '/assets/layout/layout.js';
-import {sections} from '/assets/sections/sections.js'
-let main = document.querySelector('main');
-for (let section of sections)
-{
-    main.appendChild(section);
-}
 
+import {preloader} from '/assets/layout/preloader.js';
+import {initLayout} from '/assets/layout/layout.js';
+import {sections} from '/assets/sections/sections.js';
+import {modules} from '/assets/components/modules/modules.js';
+let body = document.body,
+    main = document.querySelector('main');
 
-//global Listeners
-document.addEventListener('DOMContentLoaded', ()=>{
-    XY.initXY();
-});
-window.addEventListener('resize', ()=>{
-    XY.initXY();
-});
+body.appendChild(preloader);
+
 
 //Functions
+function init() {    
+    initLayout(main);
+    sections.forEach(section=> {
+        main.appendChild(section)
+    })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    init();
+});
+
+
+window.addEventListener('resize', ()=>{
+});
+window.addEventListener('scroll', ()=>{
+});
+window.addEventListener('click', ()=>{
+});
+
