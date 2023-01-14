@@ -1,7 +1,7 @@
 export class IntroSection extends HTMLElement {
     constructor () {
         super();
-        this.intro = "С НОВЫМ ГОДОМ!";        
+        this.intro = "";        
     }
     connectedCallback() {  
         this.render();
