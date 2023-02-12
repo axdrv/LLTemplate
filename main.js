@@ -20,6 +20,8 @@ function init() {
 document.addEventListener('DOMContentLoaded', () => {
     init();
 });
+
+
 window.addEventListener('resize', ()=>{
 });
 window.addEventListener('scroll', ()=>{

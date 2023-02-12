@@ -23,10 +23,11 @@ export class BackgroundItem extends HTMLElement {
             right: 0;
             top: 0;            
             bottom: 0;
-            background: white;
+            background: #04041b;
             z-index: -10;
-            overflow: hidden;            
+            overflow: hidden;
         }
-        </style>`
+        </style>
+        `;
     } 
 }

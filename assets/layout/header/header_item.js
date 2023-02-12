@@ -1,4 +1,3 @@
-import {sections} from '/assets/sections/sections.js';
 export class HeaderItem extends HTMLElement {
     constructor () {
         super();
